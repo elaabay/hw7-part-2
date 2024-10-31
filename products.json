@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Vintage T-shirt",
+        "description": "Tie-dye Grateful Dead T-shirt",
+        "price": "$35",
+        "categories": ["clothing", "vintage"]
+    },
+    {
+        "name": "Bluetooth Speaker",
+        "description": "Portable wireless speaker with deep bass",
+        "price": "$50",
+        "categories": ["electronics"]
+    },
+    {
+        "name": "Leather Wallet",
+        "description": "Classic leather wallet with card slots",
+        "price": "$20",
+        "categories": ["accessories", "vintage"]
+    },
+    {
+        "name": "Smart Watch",
+        "description": "Fitness tracker with heart rate monitor",
+        "price": "$150",
+        "categories": ["electronics"]
+    },
+    {
+        "name": "Coffee Mug",
+        "description": "Ceramic mug with motivational quote",
+        "price": "$10",
+        "categories": ["home goods"]
+    },
+    {
+        "name": "Noise-cancelling Headphones",
+        "description": "Over-ear headphones with active noise cancellation",
+        "price": "$200",
+        "categories": ["electronics"]
+    },
+    {
+        "name": "Scented Candle",
+        "description": "Lavender-scented candle for relaxation",
+        "price": "$15",
+        "categories": ["home goods", "accessories"]
+    },
+    {
+        "name": "Graphic Hoodie",
+        "description": "Cotton hoodie with cool graphic print",
+        "price": "$45",
+        "categories": ["clothing"]
+    }
+]
+
