@@ -41,21 +41,19 @@
     </div>
     <div id="products-container"></div>
 
-    <!-- Include jQuery from a CDN -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // Function to load products from products.json
+        //load products from products.json
         $.getJSON('products.json', function(data) {
             console.log("Data loaded successfully:", data); // Debugging output
             const products = data;
             const categoriesSet = new Set();
 
-            // Collect unique categories from the products
             products.forEach(product => {
                 product.categories.forEach(category => categoriesSet.add(category));
             });
-
-            // Populate the dropdown with categories
+            
             const categoryFilter = document.getElementById('category-filter');
             categoriesSet.forEach(category => {
                 const option = document.createElement('option');
@@ -64,7 +62,7 @@
                 categoryFilter.appendChild(option);
             });
 
-            // Function to display products
+            // display products
             function displayProducts(filteredProducts) {
                 let productsHTML = '';
                 filteredProducts.forEach(product => {
@@ -80,23 +78,21 @@
                 document.getElementById('products-container').innerHTML = productsHTML;
             }
 
-            // Display all products initially
             displayProducts(products);
 
-            // Filter products when the "Filter" button is clicked
+            // Filter products
             document.getElementById('filter-button').addEventListener('click', () => {
                 const selectedCategory = categoryFilter.value;
                 if (selectedCategory) {
                     const filteredProducts = products.filter(product => product.categories.includes(selectedCategory));
                     displayProducts(filteredProducts);
                 } else {
-                    // If no category is selected, display all products
                     displayProducts(products);
                 }
             });
         }).fail(function() {
             console.error("Failed to load products.json");
-            document.getElementById('products-container').innerHTML = "<div class='error-message'>Error: Could not load product data. Please make sure products.json is in the correct location and accessible.</div>";
+            document.getElementById('products-container').innerHTML = "<div class='error-message'>Error: Could not load product data.</div>";
         });
     </script>
 </body>
